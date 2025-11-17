@@ -3,8 +3,7 @@
     <img class="ship" src="src/assets/pictures/ship.svg" />
     <img id="player" class="player" :src="playerImageUrl" alt="player" />
 
-
-<!-- <div
+    <!-- <div
         :style="{ '--light-color': lightColor, '--dark-color': darkColor }"
         class="imposter"
       >
@@ -15,8 +14,6 @@
           <div class="helmet-glass"></div>
         </div>
       </div> -->
-
-
 
     <!-- Rendering the board mat -->
     <div id="board" class="board">
@@ -65,19 +62,19 @@
         class="move-btn down-btn"
         src="@/assets/pictures/moveBtn/button.svg"
         alt="down"
-         @click="onkeyDown(0)"
+        @click="onkeyDown(0)"
       />
       <img
         class="move-btn left-btn"
         src="@/assets/pictures/moveBtn/button.svg"
         alt="down"
-         @click="onkeyDown(3)"
+        @click="onkeyDown(3)"
       />
       <img
         class="move-btn right-btn"
         src="@/assets/pictures/moveBtn/button.svg"
         alt="down"
-         @click="onkeyDown(1)"
+        @click="onkeyDown(1)"
       />
     </div>
 
@@ -260,7 +257,9 @@ export default {
 
   computed: {
     playerImageUrl() {
-      return `src/assets/pictures/players/${this.chosenColor}.svg`;
+      const basePath =
+        process.env.NODE_ENV === "production" ? "/DaniHafifa" : "";
+      return `${basePath}/pictures/players/${this.chosenColor}.svg`;
     },
   },
 };
@@ -276,10 +275,7 @@ body {
 
 /*  */
 
-
 /*  */
-
-
 
 .joystick {
   position: absolute;
@@ -299,7 +295,7 @@ body {
 }
 
 .up-btn {
-top: 2%;
+  top: 2%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -317,7 +313,6 @@ top: 2%;
 }
 
 .right-btn {
-  
   transform: translateY(-50%) rotate(90deg);
   top: 50%;
   right: 0%;

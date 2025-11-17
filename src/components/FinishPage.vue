@@ -28,25 +28,21 @@ body {
   position: absolute;
   top: 0%;
   overflow: hidden;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .party {
-  height: 60vh;
-  width: 120vw;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 40rem;
+  width: 40rem;
+
 }
 
 .title {
   font-family: bn pixeliom;
-  position: absolute;
-  top: 15%;
-  left: 50%;
   width: 100vw;
-  transform: translate(-50%, -50%);
-  font-size: 6vh;
+  font-size: 4rem;
   text-align: center;
   direction: rtl;
 }
