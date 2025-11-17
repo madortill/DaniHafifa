@@ -24,7 +24,7 @@
                   boxShadow: glowEffects['red'] ? '0 0 20px yellow' : 'none',
                 }"
                 @click="setColor('red')"
-                src="pictures/colorBTN/redBTN.svg"
+                src="src/assets/pictures/colorBTN/redBTN.svg"
                 alt="color"
               />
             </td>
@@ -35,7 +35,7 @@
                   boxShadow: glowEffects['brown'] ? '0 0 20px yellow' : 'none',
                 }"
                 @click="setColor('brown')"
-                src="pictures/colorBTN/brownBTN.svg"
+                src="src/assets/pictures/colorBTN/brownBTN.svg"
                 alt="color"
               />
             </td>
@@ -46,7 +46,7 @@
                   boxShadow: glowEffects['green'] ? '0 0 20px yellow' : 'none',
                 }"
                 @click="setColor('green')"
-                src="pictures/colorBTN/greenBTN.svg"
+                src="src/assets/pictures/colorBTN/greenBTN.svg"
                 alt="color"
               />
             </td>
@@ -59,7 +59,7 @@
                     : 'none',
                 }"
                 @click="setColor('lightblue')"
-                src="pictures/colorBTN/lightblueBTN.svg"
+                src="@/assets/pictures/colorBTN/lightblueBTN.svg"
                 alt="color"
               />
             </td>
@@ -72,7 +72,7 @@
                   boxShadow: glowEffects['orange'] ? '0 0 20px yellow' : 'none',
                 }"
                 @click="setColor('orange')"
-                src="pictures/colorBTN/orangeBTN.svg"
+                src="@/assets/pictures/colorBTN/orangeBTN.svg"
                 alt="color"
               />
             </td>
@@ -83,7 +83,7 @@
                   boxShadow: glowEffects['yellow'] ? '0 0 20px yellow' : 'none',
                 }"
                 @click="setColor('yellow')"
-                src="pictures/colorBTN/yellowBTN.svg"
+                src="@/assets/pictures/colorBTN/yellowBTN.svg"
                 alt="color"
               />
             </td>
@@ -96,11 +96,10 @@
                     : 'none',
                 }"
                 @click="setColor('darkgreen')"
-                src="pictures/colorBTN/darkgreenBTN.svg"
+                src="@/assets/pictures/colorBTN/darkgreenBTN.svg"
                 alt="color"
               />
             </td>
-            
             <td>
               <img
                 class="color"
@@ -108,7 +107,7 @@
                   boxShadow: glowEffects['blue'] ? '0 0 20px yellow' : 'none',
                 }"
                 @click="setColor('blue')"
-                src="pictures/colorBTN/blueBTN.svg"
+                src="@/assets/pictures/colorBTN/blueBTN.svg"
                 alt="color"
               />
             </td>
@@ -135,7 +134,7 @@
       v-if="showArrow"
       class="arrow"
       @click="next"
-      src="pictures/arrow.svg"
+      src="@/assets/pictures/arrow.svg"
       alt="arrow"
     />
   </div>

@@ -1,19 +1,7 @@
 <template>
   <div id="the-ship">
-    <img class="ship" src="pictures/ship.svg" />
-    <img id="player" class="player" :src="playerImageUrl" alt="player" />
-
-    <!-- <div
-        :style="{ '--light-color': lightColor, '--dark-color': darkColor }"
-        class="imposter"
-      >
-        <div class="spacesuit">
-          <div class="chest-and-head"></div>
-          <div class="legs"></div>
-          <div class="arm"></div>
-          <div class="helmet-glass"></div>
-        </div>
-      </div> -->
+    <img class="ship" src="src/assets/pictures/ship.svg" />
+    <img id="player" class="player" :src="playerImageUrl"  alt="player" />
 
     <!-- Rendering the board mat -->
     <div id="board" class="board">
@@ -27,21 +15,21 @@
       @click="showTheWindow"
       v-if="shownItem === 1"
       class="first-item"
-      src="pictures/glowItems/first.svg"
+      src="@/assets/pictures/glowItems/first.svg"
       alt="glow-table"
     />
     <img
       @click="showTheWindow"
       v-else-if="shownItem === 2"
       class="second-item"
-      src="pictures/glowItems/second.svg"
+      src="@/assets/pictures/glowItems/second.svg"
       alt="glow-table"
     />
     <img
       @click="showTheWindow"
       v-else-if="shownItem === 3"
       class="third-item"
-      src="pictures/glowItems/third.svg"
+      src="@/assets/pictures/glowItems/third.svg"
       alt="glow-machine"
     />
 
@@ -49,32 +37,32 @@
     <div class="joystick">
       <img
         class="back"
-        src="pictures/moveBtn/background.svg"
+        src="@/assets/pictures/moveBtn/background.svg"
         alt="back-joystick"
       />
       <img
         class="move-btn up-btn"
-        src="pictures/moveBtn/button.svg"
+        src="@/assets/pictures/moveBtn/button.svg"
         alt="up"
         @click="onkeyDown(2)"
       />
       <img
         class="move-btn down-btn"
-        src="pictures/moveBtn/button.svg"
+        src="@/assets/pictures/moveBtn/button.svg"
         alt="down"
-        @click="onkeyDown(0)"
+         @click="onkeyDown(0)"
       />
       <img
         class="move-btn left-btn"
-        src="pictures/moveBtn/button.svg"
+        src="@/assets/pictures/moveBtn/button.svg"
         alt="down"
-        @click="onkeyDown(3)"
+         @click="onkeyDown(3)"
       />
       <img
         class="move-btn right-btn"
-        src="pictures/moveBtn/button.svg"
+        src="@/assets/pictures/moveBtn/button.svg"
         alt="down"
-        @click="onkeyDown(1)"
+         @click="onkeyDown(1)"
       />
     </div>
 
@@ -249,21 +237,18 @@ export default {
         return true;
       }
     },
+
     toGamePage() {
       this.$emit("toGame");
     },
   },
-
   computed: {
-    // playerImageUrl() {
-    //   const basePath =
-    //     process.env.NODE_ENV === "production" ? "/DaniHafifa" : "";
-    //   return `${basePath}/pictures/players/${this.chosenColor}.svg`;
-    // },
-    playerImageUrl() {
-  return `pictures/players/${this.chosenColor}.svg`;
+  playerImageUrl() {
+    // בסיס תקין לשימוש ב-public
+    return `${import.meta.env.BASE_URL}pictures/players/${this.chosenColor}.svg`;
+  }
 }
-  },
+  
 };
 </script>
 
@@ -277,7 +262,10 @@ body {
 
 /*  */
 
+
 /*  */
+
+
 
 .joystick {
   position: absolute;
@@ -297,7 +285,7 @@ body {
 }
 
 .up-btn {
-  top: 2%;
+top: 2%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -315,6 +303,7 @@ body {
 }
 
 .right-btn {
+  
   transform: translateY(-50%) rotate(90deg);
   top: 50%;
   right: 0%;

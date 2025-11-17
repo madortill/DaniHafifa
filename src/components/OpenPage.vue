@@ -5,7 +5,7 @@
       <img
         class="arrow"
         @click="next"
-        src="pictures/arrow.svg"
+        src="@/assets/pictures/arrow.svg"
         alt="arrow"
       />
     </div>
@@ -13,7 +13,7 @@
     <div v-if="toShow" class="loading">
       <img
         class="shhh-amongus"
-        src="pictures/shhh.svg"
+        src="@/assets/pictures/shhh.svg"
         alt="shhh-amongus"
       />
     </div>
