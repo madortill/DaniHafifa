@@ -31,6 +31,7 @@
     ></finish-page>
     <!-- <div id="hide"></div> -->
   </div>
+  
 </template>
 
 <script>
