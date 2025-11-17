@@ -1,11 +1,11 @@
 <template>
   <div id="meteors">
     <div v-if="!show" class="space-right">
-      <img v-if="showExit" @click="close" class="close" src="/pictures/X.svg" alt="x"/>
+      <img v-if="showExit" @click="close" class="close" src="pictures/X.svg" alt="x"/>
 <p class="headline">- לחצי על מטאור -</p>
-    <img @click="meteorInfo('0')" class="baby" src="/pictures/meteor.svg" alt="meteor"/>
-    <img  @click="meteorInfo('1')" class="teenage" src="/pictures/meteor.svg" alt="meteor"/>
-    <img @click="meteorInfo('2')" class="adult" src="/pictures/meteor.svg" alt="meteor"/>
+    <img @click="meteorInfo('0')" class="baby" src="pictures/meteor.svg" alt="meteor"/>
+    <img  @click="meteorInfo('1')" class="teenage" src="pictures/meteor.svg" alt="meteor"/>
+    <img @click="meteorInfo('2')" class="adult" src="pictures/meteor.svg" alt="meteor"/>
     </div>
     <info :theColor="color" :type="kind" @back="getBack" v-if="show"></info>
   </div>

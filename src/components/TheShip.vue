@@ -1,6 +1,6 @@
 <template>
   <div id="the-ship">
-    <img class="ship" src="/pictures/ship.svg" />
+    <img class="ship" src="pictures/ship.svg" />
     <img id="player" class="player" :src="playerImageUrl" alt="player" />
 
     <!-- <div
@@ -27,21 +27,21 @@
       @click="showTheWindow"
       v-if="shownItem === 1"
       class="first-item"
-      src="/pictures/glowItems/first.svg"
+      src="pictures/glowItems/first.svg"
       alt="glow-table"
     />
     <img
       @click="showTheWindow"
       v-else-if="shownItem === 2"
       class="second-item"
-      src="/pictures/glowItems/second.svg"
+      src="pictures/glowItems/second.svg"
       alt="glow-table"
     />
     <img
       @click="showTheWindow"
       v-else-if="shownItem === 3"
       class="third-item"
-      src="/pictures/glowItems/third.svg"
+      src="pictures/glowItems/third.svg"
       alt="glow-machine"
     />
 
@@ -49,30 +49,30 @@
     <div class="joystick">
       <img
         class="back"
-        src="/pictures/moveBtn/background.svg"
+        src="pictures/moveBtn/background.svg"
         alt="back-joystick"
       />
       <img
         class="move-btn up-btn"
-        src="/pictures/moveBtn/button.svg"
+        src="pictures/moveBtn/button.svg"
         alt="up"
         @click="onkeyDown(2)"
       />
       <img
         class="move-btn down-btn"
-        src="/pictures/moveBtn/button.svg"
+        src="pictures/moveBtn/button.svg"
         alt="down"
         @click="onkeyDown(0)"
       />
       <img
         class="move-btn left-btn"
-        src="/pictures/moveBtn/button.svg"
+        src="pictures/moveBtn/button.svg"
         alt="down"
         @click="onkeyDown(3)"
       />
       <img
         class="move-btn right-btn"
-        src="/pictures/moveBtn/button.svg"
+        src="pictures/moveBtn/button.svg"
         alt="down"
         @click="onkeyDown(1)"
       />
@@ -255,11 +255,14 @@ export default {
   },
 
   computed: {
+    // playerImageUrl() {
+    //   const basePath =
+    //     process.env.NODE_ENV === "production" ? "/DaniHafifa" : "";
+    //   return `${basePath}/pictures/players/${this.chosenColor}.svg`;
+    // },
     playerImageUrl() {
-      const basePath =
-        process.env.NODE_ENV === "production" ? "/DaniHafifa" : "";
-      return `${basePath}/pictures/players/${this.chosenColor}.svg`;
-    },
+  return `pictures/players/${this.chosenColor}.svg`;
+}
   },
 };
 </script>
