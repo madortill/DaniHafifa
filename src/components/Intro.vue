@@ -100,6 +100,7 @@
                 alt="color"
               />
             </td>
+            
             <td>
               <img
                 class="color"
